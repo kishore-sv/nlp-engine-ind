@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>nlp-engine-ind Web Example</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>nlp-engine-ind</h1>
+    <p>Offline local NLP in the browser via WebAssembly.</p>
+    <label>
+      Language
+      <select id="language">
+        <option value="kn">Kannada</option>
+        <option value="hi">Hindi</option>
+        <option value="te">Telugu</option>
+        <option value="ta">Tamil</option>
+        <option value="ml">Malayalam</option>
+      </select>
+    </label>
+    <label>
+      English input
+      <textarea id="input" rows="4">I'll finish this work and call you once I'm free.</textarea>
+    </label>
+    <button id="convert">Convert offline ✨</button>
+    <section>
+      <h2>Output</h2>
+      <pre id="output">Build WASM first: ./scripts/build-wasm.sh</pre>
+      <p id="meta"></p>
+    </section>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

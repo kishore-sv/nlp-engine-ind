@@ -1,0 +1,10 @@
+{
+  "name": "nlp-engine-ind-node-example",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Node.js example using nlp-engine-ind WASM (same Rust core)",
+  "scripts": {
+    "convert": "node convert.mjs"
+  }
+}

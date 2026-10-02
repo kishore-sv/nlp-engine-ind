@@ -1,0 +1,89 @@
+namespace nlp_engine_ind {};
+
+enum Language {
+    "Kannada",
+    "Hindi",
+    "Telugu",
+    "Tamil",
+    "Malayalam",
+};
+
+enum Style {
+    "Casual",
+    "Neutral",
+    "Formal",
+};
+
+enum CodeMixMode {
+    "Natural",
+    "Minimal",
+    "Aggressive",
+};
+
+enum RomanizationStyle {
+    "CasualChat",
+    "Standard",
+    "Academic",
+};
+
+dictionary ConversionContext {
+    string? previous_text;
+    string? selected_text;
+    string? current_sentence;
+};
+
+dictionary ConversionRequest {
+    string text;
+    Language language;
+    Style style;
+    CodeMixMode code_mix;
+    RomanizationStyle romanization;
+    ConversionContext? context;
+};
+
+dictionary ConversionResult {
+    string input;
+    string output;
+    Language language;
+    float confidence;
+    u64 processing_time_us;
+};
+
+dictionary EngineConfig {
+    Language language;
+    Style style;
+    CodeMixMode code_mix;
+    RomanizationStyle romanization;
+    sequence<Language> enabled_languages;
+};
+
+dictionary KeyboardResult {
+    string output;
+    float confidence;
+    u64 processing_time_us;
+};
+
+interface NlpEngine {
+    [Throws=EngineError]
+    constructor(EngineConfig config);
+
+    [Throws=EngineError]
+    ConversionResult convert(ConversionRequest request);
+
+    [Throws=EngineError]
+    ConversionResult convert_text(string text);
+
+    [Throws=EngineError]
+    KeyboardResult convert_for_keyboard(string text);
+
+    void set_language(Language language);
+};
+
+[Error]
+interface EngineError {
+    UnsupportedLanguage(string language);
+    InvalidInput(string reason);
+    EmptyInput();
+    GenerationFailure(string reason);
+    InvalidConfiguration(string reason);
+};

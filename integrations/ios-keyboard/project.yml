@@ -1,0 +1,35 @@
+name: NlpEngineIndKeyboard
+options:
+  bundleIdPrefix: com.nlpengine.ind
+  deploymentTarget:
+    iOS: "15.0"
+settings:
+  SWIFT_VERSION: "5.9"
+  ENABLE_USER_SCRIPT_SANDBOXING: NO
+packages: {}
+targets:
+  NlpEngineIndKeyboard:
+    type: application
+    platform: iOS
+    sources:
+      - path: NlpEngineIndKeyboard
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.nlpengine.ind.keyboard
+    dependencies:
+      - target: NlpKeyboardExtension
+        embed: true
+  NlpKeyboardExtension:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: NlpKeyboardExtension
+      - path: ../../release/ios/swift-bindings
+        optional: true
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.nlpengine.ind.keyboard.extension
+      INFOPLIST_KEY_CFBundleDisplayName: NlpEngineInd
+      INFOPLIST_KEY_NSHumanReadableCopyright: ""
+      LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks"
+    dependencies:
+      - framework: ../../release/ios/NlpEngineInd.xcframework
+        embed: false

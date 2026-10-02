@@ -1,0 +1,65 @@
+[
+  {
+    "input": "I'll call you later",
+    "language": "kn",
+    "expected_output": "Later call madtini",
+    "acceptable_alternatives": ["later call madtini"],
+    "intent": "Statement"
+  },
+  {
+    "input": "Are you coming?",
+    "language": "kn",
+    "expected_output": "Barthiya?",
+    "acceptable_alternatives": ["barthiya?"],
+    "intent": "Question"
+  },
+  {
+    "input": "What are you doing?",
+    "language": "kn",
+    "expected_output": "En maadthiddiya?",
+    "acceptable_alternatives": ["en maadthiddiya?"],
+    "intent": "Question"
+  },
+  {
+    "input": "Can you send me the file?",
+    "language": "kn",
+    "expected_output": "Nanage file send maadbodiya?",
+    "acceptable_alternatives": ["nanage file send maadbodiya?"],
+    "intent": "Request"
+  },
+  {
+    "input": "I am busy right now",
+    "language": "kn",
+    "expected_output": "Eega busy ideeni",
+    "acceptable_alternatives": ["eega busy ideeni"],
+    "intent": "Statement"
+  },
+  {
+    "input": "I'll finish this work and call you once I'm free",
+    "language": "kn",
+    "expected_output": "Ee work mugsi free aadmele call madtini",
+    "acceptable_alternatives": [],
+    "intent": "Statement"
+  },
+  {
+    "input": "Don't worry, I'll handle it",
+    "language": "kn",
+    "expected_output": "Chinta padbeda, handle madtini",
+    "acceptable_alternatives": [],
+    "intent": "Statement"
+  },
+  {
+    "input": "Let's meet tomorrow",
+    "language": "kn",
+    "expected_output": "Naale meet maadona",
+    "acceptable_alternatives": ["naale meet maadona"],
+    "intent": "Invitation"
+  },
+  {
+    "input": "Bro, can you send me the project?",
+    "language": "kn",
+    "expected_output": "Bro, nanage project send maadbodiya?",
+    "acceptable_alternatives": ["bro, nanage project send maadbodiya?"],
+    "intent": "Request"
+  }
+]

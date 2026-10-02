@@ -1,0 +1,6 @@
+[bindings.kotlin]
+package_name = "uniffi.nlp_engine_ind"
+cdylib_name = "nlp_engine_ind_uniffi"
+
+[bindings.swift]
+cdylib_name = "nlp_engine_ind_uniffi"

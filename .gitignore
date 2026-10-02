@@ -1,0 +1,143 @@
+# Rust / Cargo
+/target/
+**/*.rs.bk
+*.pdb
+
+# Criterion benchmarks
+/target/criterion/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editors & IDEs
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+*.iml
+.project
+.classpath
+.settings/
+
+# Cursor (local IDE state)
+.cursor/
+
+# Environment & secrets — never commit these
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+secrets.json
+local.properties
+
+# Logs & temp files
+*.log
+*.tmp
+*.temp
+.cache/
+
+# Rust coverage / profiling
+*.profraw
+*.profdata
+coverage/
+lcov.info
+tarpaulin-report.html
+
+# wasm-pack
+/pkg/
+.wasm-pack/
+**/pkg/.gitignore
+
+# Generated platform artifacts (reproduce via scripts/)
+/bindings/uniffi/generated/
+/bindings/android/nlp-engine-ind/src/main/jniLibs/
+/integrations/web-example/pkg/
+/integrations/node-example/pkg/
+/release/
+*.xcframework
+
+# Android / Gradle
+.gradle/
+**/build/
+**/local.properties
+*.apk
+*.aab
+*.ap_
+*.dex
+captures/
+.externalNativeBuild/
+.cxx/
+google-services.json
+
+integrations/android-keyboard/.gradle/
+integrations/android-keyboard/**/build/
+bindings/android/**/.gradle/
+bindings/android/**/build/
+
+# iOS / Xcode
+DerivedData/
+*.xcuserstate
+*.xcuserdatad/
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcodeproj/project.xcworkspace/
+!*.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+
+# XcodeGen output (regenerate with: xcodegen generate)
+integrations/ios-keyboard/*.xcodeproj/
+integrations/ios-keyboard/*.xcworkspace/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Python (web example local server / tooling)
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Documentation site builds (if added later)
+/site/
+book/
+
+# OS / archive artifacts
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+
+# Keep Cargo.lock — commit it for reproducible application/SDK builds
+# (do not add Cargo.lock to this file)

@@ -1,0 +1,23 @@
+[package]
+name = "nlp-engine-ind-languages"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Language lexicons and generation rules for nlp-engine-ind"
+
+[lib]
+name = "nlp_engine_ind_languages"
+path = "src/lib.rs"
+
+[features]
+default = ["kannada", "hindi", "telugu", "tamil", "malayalam"]
+kannada = []
+hindi = []
+telugu = []
+tamil = []
+malayalam = []
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }

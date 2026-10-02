@@ -1,0 +1,15 @@
+[package]
+name = "nlp-engine-ind-ffi"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "C ABI bindings for nlp-engine-ind"
+
+[lib]
+crate-type = ["cdylib", "staticlib", "rlib"]
+name = "nlp_engine_ind_ffi"
+path = "src/lib.rs"
+
+[dependencies]
+nlp-engine-ind-core = { workspace = true }

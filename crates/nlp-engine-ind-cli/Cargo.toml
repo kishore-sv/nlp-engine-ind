@@ -1,0 +1,17 @@
+[package]
+name = "nlp-engine-ind-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "CLI for nlp-engine-ind"
+
+[[bin]]
+name = "nlp-engine-ind"
+path = "src/main.rs"
+
+[dependencies]
+nlp-engine-ind-core = { workspace = true }
+clap = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }

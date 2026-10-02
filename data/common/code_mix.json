@@ -1,0 +1,15 @@
+{
+  "preserve_global": [
+    "call", "work", "meeting", "office", "project", "college", "class", "file",
+    "message", "update", "busy", "free", "plan", "problem", "idea", "check",
+    "confirm", "send", "download", "upload", "party", "movie", "phone", "bro",
+    "broo", "brooo", "ok", "okay", "sorry", "thanks", "thank", "please", "hi",
+    "hello", "hey", "bye", "lol", "omg", "wtf", "idk", "tbh", "ngl", "brb",
+    "github", "youtube", "iphone", "android", "whatsapp", "instagram", "telegram",
+    "discord", "google", "email", "link", "wifi", "internet", "app", "login",
+    "password", "screen", "laptop", "computer", "handle", "submit", "assignment",
+    "exam", "test", "lab", "team", "boss", "client", "deadline", "schedule",
+    "ticket", "invoice", "payment", "bank", "card", "uber", "ola", "swiggy",
+    "zomato", "amazon", "flipkart", "netflix", "spotify", "zoom", "meet"
+  ]
+}

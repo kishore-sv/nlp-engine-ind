@@ -1,0 +1,28 @@
+[package]
+name = "nlp-engine-ind-uniffi"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "UniFFI bindings for nlp-engine-ind mobile SDK"
+
+[lib]
+crate-type = ["lib", "cdylib", "staticlib"]
+name = "nlp_engine_ind_uniffi"
+
+[dependencies]
+nlp-engine-ind-core = { workspace = true }
+uniffi = { workspace = true }
+thiserror = { workspace = true }
+
+[[bin]]
+name = "uniffi-bindgen"
+path = "src/bin/uniffi-bindgen.rs"
+
+[features]
+default = ["kannada", "hindi", "telugu", "tamil", "malayalam"]
+kannada = ["nlp-engine-ind-core/kannada"]
+hindi = ["nlp-engine-ind-core/hindi"]
+telugu = ["nlp-engine-ind-core/telugu"]
+tamil = ["nlp-engine-ind-core/tamil"]
+malayalam = ["nlp-engine-ind-core/malayalam"]

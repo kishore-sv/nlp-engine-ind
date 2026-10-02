@@ -1,0 +1,50 @@
+[package]
+name = "nlp-engine-ind-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+description.workspace = true
+
+[lib]
+name = "nlp_engine_ind_core"
+path = "src/lib.rs"
+
+[features]
+default = ["kannada", "hindi", "telugu", "tamil", "malayalam"]
+kannada = ["nlp-engine-ind-languages/kannada"]
+hindi = ["nlp-engine-ind-languages/hindi"]
+telugu = ["nlp-engine-ind-languages/telugu"]
+tamil = ["nlp-engine-ind-languages/tamil"]
+malayalam = ["nlp-engine-ind-languages/malayalam"]
+
+[dependencies]
+nlp-engine-ind-languages = { workspace = true }
+nlp-engine-ind-romanize = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+
+[dev-dependencies]
+serde_json = { workspace = true }
+criterion = { workspace = true }
+
+[[bench]]
+name = "pipeline"
+harness = false
+
+[[example]]
+name = "basic"
+path = "examples/basic.rs"
+
+[[example]]
+name = "multilingual"
+path = "examples/multilingual.rs"
+
+[[example]]
+name = "code_mixing"
+path = "examples/code_mixing.rs"
+
+[[example]]
+name = "performance"
+path = "examples/performance.rs"
