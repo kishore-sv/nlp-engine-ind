@@ -28,9 +28,22 @@ rustup target add x86_64-linux-android
 ./scripts/build-android.sh
 ```
 
+This generates UniFFI Kotlin bindings and `jniLibs` for the `:nlp-engine-ind` module, and writes `integrations/android-keyboard/local.properties` from `ANDROID_HOME` when missing.
+
 Output: `bindings/android/nlp-engine-ind/src/main/jniLibs/arm64-v8a/libnlp_engine_ind_uniffi.so`
 
 UniFFI Kotlin bindings: `bindings/uniffi/generated/kotlin/`
+
+## Build APK (Gradle Wrapper)
+
+From a fresh clone, after `./scripts/build-android.sh`:
+
+```bash
+cd integrations/android-keyboard
+./gradlew :app:assembleDebug
+```
+
+Gradle **8.9** (wrapper) with Android Gradle Plugin **8.5.2**. See [integrations/android-keyboard/BUILD.md](../../integrations/android-keyboard/BUILD.md).
 
 ## Open sample keyboard
 

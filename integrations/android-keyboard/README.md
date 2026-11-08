@@ -2,6 +2,19 @@
 
 Demonstrates offline English → Roman Indian-language conversion via the Rust engine.
 
+## Fresh clone build
+
+See **[BUILD.md](BUILD.md)** for reproducible CLI steps (Gradle Wrapper, `./scripts/build-android.sh`, `./gradlew`).
+
+Quick path from repo root:
+
+```bash
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+./scripts/build-android.sh
+cd integrations/android-keyboard
+./gradlew :app:assembleDebug
+```
+
 ## Prerequisites
 
 ```bash
@@ -17,8 +30,8 @@ open -a "Android Studio" integrations/android-keyboard
 
 ## Usage
 
-1. Run on arm64 device or emulator
-2. Settings → System → Keyboard → Enable **NlpEngineInd**
+1. Run on arm64 device or emulator (x86_64 emulator requires `BUILD_ANDROID_X86=1` when running `build-android.sh`)
+2. Settings → System → Keyboard → Enable **NLP Engine Keyboard**
 3. Type English in any app
 4. Tap **Convert ✨**
 
